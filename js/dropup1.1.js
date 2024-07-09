@@ -15,7 +15,7 @@ function infoup(url) {
 			bkg.setAttribute('id', 'bkgr');  	
 			dv2 = document.createElement('div');
 			dv2.setAttribute('id', 'dv2');
-			dv2.setAttribute('class', 'inner pnl-bd urlainer'); 				
+			dv2.setAttribute('class', 'inner pnl-bd'); 				
 			var win_scr_w = 300/window.screen.width;
 			var win_scr_h = 450/window.screen.height;
 			var pos_w = 50-((100*win_scr_w)/2);       

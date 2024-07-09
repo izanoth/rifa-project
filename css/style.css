@@ -4,7 +4,7 @@
 
  .inner {
  	padding-top: 30px;
- 	color: #ffffff;
+ 	color: rgb(250, 150, 150);
  	font-family: Sans-serif;
  }
 
@@ -14,20 +14,21 @@
  	border-radius: 5px;
  }
 
- .inner [type='submit'] {
+ .inner input[type='submit'] {
  	font-family: Sans-serif;
- 	background-color: #9f2121;
+ 	background-color: rgb(150, 50, 50);
+ 	color: rgb(250, 150, 150);
  	border-radius: 5px;
- 	color: #e9e9e9;
- 	font-size: 18px;
+ 	font-size: 22px;
+	font-weight: bold;
  	padding: 10px;
  	transition: 2s background-color, color;
  }
 
- .inner [type='submit']:hover {
+ .inner input[type='submit']:hover {
  	font-family: Sans-serif;
- 	background-color: #e9e9e9;
- 	color: #9f2121;
+ 	color: #e9e9e9;
+ 	background-color: #9f2121;
  }
 
  .inner input[type='number'] {
@@ -43,17 +44,17 @@
  /*.**/
  .pnl-bd button {
  	font-family: Sans-serif;
- 	background-color: #9f2121;
+ 	background-color: rgb(150, 50, 50);
+ 	color: rgb(250, 150, 150);
  	border-radius: 25px;
- 	color: #e9e9e9;
  	font-size: 18px;
  	padding: 10px;
  	transition: 2s background-color, color;
  }
 
  .pnl-bd button:hover {
- 	background-color: #e9e9e9;
- 	color: #9f2121;
+ 	color: rgb(150, 50, 50);
+ 	background-color: rgb(250, 150, 150);
  }
 
  .inner #btn-rules {
@@ -62,7 +63,7 @@
  	padding: 0px;
  	background-color: transparent;
  	color: white;
- 	font-size: 14px;
+ 	font-size: 18px;
  	text-decoration: underline;
  }
 
@@ -75,6 +76,20 @@
 
  .result {
  	font-size: 28px;
+ }
+
+ .adv h3{
+	color: #000;
+ }
+
+ @media (max-width: 767) {
+	.adv h3{
+		text-align: center;
+	}
+	.adv img {
+		margin-left: auto;
+		margin-right: auto;
+	}
  }
 
  @media (max-width: 991px) {
@@ -178,6 +193,11 @@
  	top: 18px;
  	right: 0px;
  }
+ .by #cnpj {
+	position: absolute;
+	top: 34px;
+	right: 0px;
+ }
 
  .foot-left .reg {
  	text-align: left;
@@ -202,6 +222,11 @@
  		margin-right: auto;
  		margin-left: auto;
  	}
+	 .by #cnpj {
+		position: static;
+		display: block;
+		text-align: center;
+	}
 
  	.foot-left .reg {
  		text-align: center;
@@ -236,7 +261,7 @@
  	background-color: #9f2121;
  	border-radius: 5px;
  	color: #e9e9e9;
- 	font-size: 18px;
+ 	font-size: 20px;
 
  	padding: 10px;
  	transition: 2s background-color, color;
@@ -295,7 +320,7 @@
  }
 
  .tokbg img {
- 	mix-tokbg-mode: lighten;
+ 	-mix-tokbg-mode: lighten;
  }
 
  .stripe {
@@ -344,4 +369,66 @@
  	position: fixed;
  	top: 0px;
  	left: 0px;
+ }
+
+
+
+
+ .custom-btn {
+ 	background-color: rgb(150, 50, 50);
+ 	color: rgb(250, 200, 200);
+ 	margin: auto;
+ 	padding: 20px;
+ 	text-align: center;
+	font-weight: 500;
+ 	cursor: pointer;
+ 	width: 300px;
+ }
+
+ .jumbotron {
+	padding:2rem 1rem;
+	margin-bottom: 2rem;
+ 	background-color: rgb(250, 200, 200);
+ 	border-radius: .3rem
+ }
+ @media (min-width:576px){
+	.jumbotron{
+		padding:4rem 2rem;
+	}
+}
+
+ .stripe-head h2 {
+ 	position: relative;
+ 	color: rgb(150, 50, 50);
+ }
+
+ .showup {
+ 	margin: auto;
+ 	width: 100%;
+ }
+
+ .fas {
+ 	cursor: pointer;
+ 	font-size: 35px;
+ 	position: fixed;
+ 	top: 15px;
+ 	right: 15px;
+ 	z-index: 3;
+ }
+
+ .film {
+ 	display: flex;
+ 	justify-content: right;
+ 	width: 100%;
+ 	height: 100%;
+ 	background-color: #fff;
+ 	position: fixed;
+ 	top: 0px;
+ 	left: 0px;
+ 	z-index: 1;
+ }
+
+ .sr-root,
+ .container {
+ 	z-index: 2;
  }

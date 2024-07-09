@@ -2,7 +2,7 @@
 	$servername ="localhost";
 	$username="root";
 	$password="";
-	$dbname="rifa";
+	$dbname="rifa-dev";
 
 	$conn = mysqli_connect($servername, $username, $password, $dbname);
 

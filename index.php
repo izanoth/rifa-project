@@ -1,5 +1,6 @@
 <?php
 include('includes/db.php');
+include('includes/pdo.php');
 ?>
 
 <!DOCTYPE html>
@@ -25,22 +26,19 @@ include('includes/db.php');
 	<script>
 		window.onload = function () {
 			var element = document.getElementById('tel');
-			var maskOptions = {
+			var phone_mask = IMask(element, {
 				mask: '(00) 00000-0000'
-			};
-			var mask = IMask(element, maskOptions);
+			});
 		}
 
 		function calc(param) {
-			var result = param.value * 2;
+			var result = param.value * 4;
 			var box = document.getElementById('result');
 			box.innerHTML = "R$ <strong style='font-size:28px;'>" + result.toString() + "</strong>, ";
 			console.log(result.toString());
 		}
 
 		$(window).ready(function () {
-			//var Width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-			//$('#TheCarousel').css('width', Width);
 			$('.show-prod').hide();
 			$('#prod').on('click', function () {
 				$('.show-prod').fadeIn(1000);
@@ -62,7 +60,7 @@ include('includes/db.php');
 					</div>
 					<?php
 					$start = new DateTime();
-					$end = new DateTime('09/08/2024 00:00:00');
+					$end = new DateTime('08/04/2024 00:00:00');
 					$diff = $end->diff($start);
 					$days = $diff->days;
 					?>
@@ -87,16 +85,16 @@ include('includes/db.php');
 	</header>
 	<section>
 		<div class="container">
-			<div class="ccontainer inner">
+			<div class="container inner adv">
 				<div class="row">
 					<div class="col-md-12">
-						<h3 style="filter:invert(1)">Você estará concorrendo a <b id="prod">Um Smartphone</b></h3>
+						<h3>Você estará concorrendo a um <a href="https://www.samsung.com/br/computers/samsung-book/galaxy-book2-15inch-i5-8gb-256gb-np550xed-kf4br/" target="_blank"><img src="img/galaxybook2.png" height="35" width="auto"></a></h3>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div id="main" class="container">
-			<form method="post" action="charge.php">
+			<form method="post" action="stripe/index.php">
 				<div class="container inner" style="border:1px;border-color:blue;">
 					<div class="row" style="position:relative">
 						<div class="col-md-4">
@@ -149,7 +147,7 @@ include('includes/db.php');
 									<table style="text-align:center;width:100%;">
 										<tr>
 											<td>
-												<span id="result">R$ <strong style="font-size:26px;">2
+												<span id="result">R$ <strong style="font-size:26px;">4
 													</strong>,</span><span><small>00</small></span>
 											</td>
 											<td>
@@ -195,6 +193,7 @@ include('includes/db.php');
 					<div class="by">
 						<small id="by">Desenvolvido por</small>
 						<img src="img/znt1.png" width="auto" height="15px;">
+						<small id="cnpj" style="font-size:8px;">46.118.941/0001-25</small>
 					</div>
 				</div>
 			</div>

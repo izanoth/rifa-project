@@ -121,7 +121,7 @@ function cpaa($field) {
 }
 
 
-function validateCpfCnpj($field, $field_company)
+function validateCpfCnpj($field, $field_company='optional')
 {
   if ($field == "") { return "cpfcnpj^Por favor, informe o CPF ou CNPJ*";}
             
