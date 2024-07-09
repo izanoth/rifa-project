@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +17,7 @@
         // Obtém a senha do campo de entrada
         $senha = $_POST["senha"];
 
+        if(isset($_POST['md5'])) {
         // Verifica se a senha não está vazia
         if (!empty($senha)) {
             $hash = md5($senha);
@@ -25,13 +28,29 @@
             echo "<p>Por favor, insira uma senha.</p>";
         }
     }
+    else if (isset($_POST['ssl'])) {
+        $enc = openssl_encrypt("CW8keIbtPRgX+BENtA3BwYCtpYVxNIAzpO2Z1FAe658=", 'aes-128-cbc', '770e761810714eae'); // gerarIV(16));
+        //$dec = openssl_decrypt($enc, 'aes-128-cbc', '770e761810714eae');
+        echo $enc;echo "<br>";
+       // echo $dec;
+    }
+}
+
     ?>
 
     <!-- Formulário para inserir a senha -->
+    <div>md5</div>
     <form method="post" action="">
         <label for="senha">Senha:</label>
         <input type="password" name="senha" required>
-        <button type="submit">Gerar Hash</button>
+        <button type="submit" name="md5">Gerar Hash</button>
+    </form>
+
+    <div>openSSL</div>
+    <form method="post" action="">
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" required>
+        <button type="submit" name="ssl">Gerar</button>
     </form>
 </body>
 </html>

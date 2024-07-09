@@ -16,7 +16,7 @@
 
 <?php
 if (isset($_POST['auth'])) {
-    require '../stripe/vendor/autoload.php';
+    require '../payment/vendor/autoload.php';
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/./');
     $dotenv->load();
     $hash = $_ENV['ADMIN_KEY'];

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function sort() {
+            var box = document.getElementById('box');
+            var i = 0;
+
+            function explines() {
+                var incopc = 0;
+                var spn = document.createElement('div');
+                spn.setAttribute('style', 'position:relative;width:100%;filter:opacity(0)');
+                var spn1 = document.createElement('div');
+                spn1.setAttribute('style', 'border:1px;padding:15px;border-radius:5px;font-size:18px;color:#eeeeee;background-color:#333333;position:absolute;right:10px;top:10px');
+                spn.appendChild(spn1);
+                var box = document.getElementById('box');
+                var txt1 = createTextNode(prm1);
+                var txt2 = createTextNode(prm2);
+                spn.innerHTML = ticket + "<br>" + nam;
+                box.appendChild(spn);
+                //appendChild(spn);
+                function cgnopc_inv() {
+                    spn.setAttribute('style', 'position:relative;width:100%;filter:opacity(' + 0.1 * incopc + ')');
+                    if (incopc != 0) {
+                        setTimeout(cgnopc_inv, 100); incopc--;
+                    }
+                }
+                function cgnopc() {
+                    spn.setAttribute('style', 'position:relative;width:100%;filter:opacity(' + 0.1 * incopc + ')');
+                    if (incopc != 10) {
+                        setTimeout(cgnopc, 100); incopc++;
+                    }
+                    else {
+                        setTimeout(cgnopc_inv, 2000);
+                    }
+                }
+                cgnopc();
+            }
+
+            function gear() {
+                var number = parseInt(Math.random() * 1000000);
+                box.innerHTML = number;
+                i++;
+                if (i < 100) {
+                    setTimeout(gear, 10);
+                }
+                else {
+                    explines();
+                }
+            }
+            gear();
+        }	
+    </script>
+
+    <meta name="title" content="Zanoth">
+    <meta name="description" content="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Unknown">
+    <meta name="keywords" content="" />
+
+    <style>
+        .flex-container {
+            background-color: #d37474;
+            ;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flex-container:nth-child(-n+2) {
+            background-color: #ffd5d5;
+            border-radius: 5px;
+            color: rgb(0, 0, 0);
+            font-size: 18px;
+        }
+
+        .child-container {
+            padding: 20px;
+        }
+
+        #btn {
+            background-color: #9f2121;
+            border-radius: 5px;
+            color: rgb(250, 200, 200);
+            font-size: 18px;
+            padding: 10px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="flex-container">
+        <div><img src="../img/rifa.png" width="100px;"></div>
+        <div class="child-container box">
+
+            tes
+
+        </div>
+        <div class="child-container ">
+            <p>test</p>
+        </div>
+        <div class="">
+            <input id="btn" type="button" onclick="sort(nam, tel)" name="sort" value="Sort" />
+        </div>
+    </div>
+</body>

@@ -4,10 +4,12 @@ create table Clients (
 	name varchar(256) not null,
 	email varchar(256) not null,
 	tel varchar(13) not null,
+	cpf int not null,
 	units int not null,
-	payment_id varchar(320) not null,
+	stripe_id varchar(320) default null,
+	asaas_id varchar(320) not null,
 	amount int not null,
-	stripe boolean default null
+	paid varchar(11) default null
 );
 create table Tickets (
 	token int not null,

@@ -102,7 +102,7 @@ $curr_date = new DateTime();
             <div>
                 <?php
                 $count = 0;
-                foreach ($datetime as $index => $value) {
+                /*foreach ($datetime as $index => $value) {
                     $date = DateTime::createFromFormat("Y-m-d H:i:s", $datetime[$index]);
                     $diff = $curr_date->diff($date);
                     $days = $diff->days;
@@ -111,7 +111,7 @@ $curr_date = new DateTime();
                         ++$count;
                     }
                 }
-                echo $count
+                echo $count*/
                     ?>
                 deles ainda a tempo de participar.
             </div>
