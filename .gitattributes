@@ -9,3 +9,12 @@
 /.github export-ignore
 CHANGELOG.md export-ignore
 .styleci.yml export-ignore
+
+
+public/assets/js_stripe_app-1EOi0Jad.js filter=git-crypt diff=git-crypt
+public/assets/infoup.js filter=git-crypt diff=git-crypt
+public/assets/js_checkout_app-HslGROsQ.js filter=git-crypt diff=git-crypt
+app/Http/Controllers/AdminController.php filter=git-crypt diff=git-crypt
+app/Http/Controllers/StripeController.php filter=git-crypt diff=git-crypt
+app/Http/Controllers/WebhookController.php filter=git-crypt diff=git-crypt
+app/Http/Controllers/AsaasController.php filter=git-crypt diff=git-crypt
