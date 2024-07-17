@@ -10,7 +10,7 @@
 CHANGELOG.md export-ignore
 .styleci.yml export-ignore
 
-
+.env filter=git-crypt diff=git-crypt
 public/assets/js_stripe_app-1EOi0Jad.js filter=git-crypt diff=git-crypt
 public/assets/infoup.js filter=git-crypt diff=git-crypt
 public/assets/js_checkout_app-HslGROsQ.js filter=git-crypt diff=git-crypt
